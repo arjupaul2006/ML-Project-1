@@ -12,7 +12,7 @@ from sklearn.pipeline import Pipeline
 
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import save_preprocessing
+from src.utils import save_object
 
 @dataclass
 class DataTranfromationConfig:
@@ -106,9 +106,9 @@ class DataTransformation:
 
             logging.info('Saved Preprocessor Object')
             # save the preprocessor into preprocessor.pkl file
-            save_preprocessing(
+            save_object(
                 file_path=self.data_transfromation_config.preprocessor_obj_file_path,
-                preprocessor=preprocessing_obj
+                obj=preprocessing_obj
             )
             
             return(

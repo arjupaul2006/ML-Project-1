@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_tranformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 # path where the train, test and raw data are stored
 @dataclass
@@ -56,4 +57,8 @@ if __name__=='__main__':
 
     data_transfromation = DataTransformation()
     train_arr, test_arr, preprocessor_obj_file_path = data_transfromation.initiate_data_transformation(train_path, test_path)
+
+    model_trainer = ModelTrainer()
+    score = model_trainer.initiate_model_trainer(train_array=train_arr, test_array=test_arr)
+    print(score)
     
