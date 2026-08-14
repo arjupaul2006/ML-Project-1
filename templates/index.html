@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Performance App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            color: #1e293b;
+        }
+
+        .hero {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px 28px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: min(90vw, 680px);
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            font-size: 34px;
+            color: #172554;
+        }
+
+        p {
+            margin: 0 0 28px;
+            color: #334155;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: 8px;
+            transition: 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Welcome to my ml project
-    </h1>
+    <section class="hero">
+        <h1>Welcome to Student Exam Performance App</h1>
+        <p>Click below to open the prediction form and estimate math score.</p>
+        <a class="btn" href="/predict-data">Go to Prediction Form</a>
+    </section>
 </body>
 </html>
